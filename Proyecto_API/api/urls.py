@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import CompanyView
+from .views import DataView
 urlpatterns = [
-    path('companies/',CompanyView.as_view(),name='companies_list'),
-    path('companies/<int:id>',CompanyView.as_view(),name='companies_list'),
-    path('getKmean/',CompanyView.getKmean,name='getKmean')
+    path('data/',DataView.as_view(),name='data_list'),
+    path('data/<int:id>',DataView.as_view(),name='data_list'),
+    path('getKmean/',DataView.getKmean,name='getKmean'),
+    path('getTdData/',DataView.getTdData,name='getTdData')
 ]
